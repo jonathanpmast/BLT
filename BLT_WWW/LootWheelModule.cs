@@ -6,6 +6,7 @@
         public LootWheelModule() {
             Get["sk"] = _ =>
             {
+                
                 return View["sk/index.cshtml"];
             };
         }
