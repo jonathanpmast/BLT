@@ -1,0 +1,83 @@
+<ksk date="2014-12-21" time="22:07">
+  <classes>
+    <c id="00" v="unkclass"/>
+    <c id="08" v="mage"/>
+    <c id="09" v="warlock"/>
+    <c id="00" v="unknown"/>
+    <c id="10" v="monk"/>
+    <c id="07" v="shaman"/>
+    <c id="06" v="deathknight"/>
+    <c id="05" v="priest"/>
+    <c id="04" v="rogue"/>
+    <c id="02" v="paladin"/>
+    <c id="03" v="hunter"/>
+    <c id="11" v="druid"/>
+    <c id="01" v="warrior"/>
+  </classes>
+  <users>
+    <u id="0002" n="Tels-aeriepeak" c="10"/>
+    <u id="0027" n="Arcròn-aeriepeak" c="03"/>
+    <u id="001f" n="Ricebucket-aeriepeak" c="04"/>
+    <u id="001d" n="Hufur-aeriepeak" c="03"/>
+    <u id="0008" n="Buntcitch-aeriepeak" c="06"/>
+    <u id="0021" n="Scoobisnacks-aeriepeak" c="02"/>
+    <u id="0023" n="Thaumagon-aeriepeak" c="08"/>
+    <u id="0022" n="Shmlangela-aeriepeak" c="08"/>
+    <u id="0041" n="Gnoam-aeriepeak" c="08"/>
+    <u id="0004" n="Idnn-aeriepeak" c="10"/>
+    <u id="001e" n="Palmie-aeriepeak" c="10"/>
+    <u id="001a" n="Arlonath-aeriepeak" c="05"/>
+  </users>
+  <quals>
+    <q id="1" v="common"/>
+    <q id="0" v="poor"/>
+    <q id="4" v="epic"/>
+    <q id="6" v="artifact"/>
+    <q id="5" v="legendary"/>
+    <q id="2" v="uncommon"/>
+    <q id="3" v="rare"/>
+  </quals>
+  <items>
+    <i id="119347" n="Gill's Glorious Windcloak" q="4"/>
+    <i id="113654" n="Moss-Woven Mailshirt" q="4"/>
+    <i id="113664" n="Sandals of Mycoid Musing" q="4"/>
+    <i id="113662" n="Collar of Wailing Mouths" q="4"/>
+    <i id="113658" n="Bottle of Infesting Spores" q="4"/>
+    <i id="113828" n="Sea-Cursed Leggings" q="4"/>
+    <i id="113667" n="Phemos' Double Slasher" q="4"/>
+    <i id="113835" n="Shards of Nothing" q="4"/>
+    <i id="113832" n="Treacherous Palms" q="4"/>
+    <i id="113636" n="Belt of Bloody Guts" q="4"/>
+    <i id="113633" n="Entrail Squishers" q="4"/>
+    <i id="113632" n="Gauntlets of the Heavy Hand" q="4"/>
+    <i id="113609" n="Slaughterhouse Spaulders" q="4"/>
+  </items>
+  <lists>
+    <l id="D" n="Disenchanted"/>
+    <l id="R" n="Won Roll"/>
+    <l id="B" n="BoE assigned to ML"/>
+    <l id="A" n="Auto-assigned"/>
+    <l id="U" n="Undo"/>
+    <l id="u" n="???"/>
+    <l id="141204c169ee12" n="Misc"/>
+    <l id="141204acc8c877" n="Armor"/>
+    <l id="14120407f93132" n="Weapon"/>
+  </lists>
+  <history>
+    <h d="2014-12-18" t="20:26" id="119347" u="0002" w="141204c169ee12"/>
+    <h d="2014-12-18" t="20:17" id="113654" u="0027" w="141204acc8c877"/>
+    <h d="2014-12-18" t="20:17" id="113664" u="001f" w="141204acc8c877"/>
+    <h d="2014-12-18" t="20:16" id="113654" u="001d" w="141204acc8c877"/>
+    <h d="2014-12-18" t="20:16" id="113662" u="0008" w="141204c169ee12"/>
+    <h d="2014-12-18" t="20:16" id="113658" u="0021" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:36" id="113828" u="0023" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:35" id="113828" u="0022" w="14120407f93132"/>
+    <h d="2014-12-18" t="19:34" id="113667" u="001f" w="14120407f93132"/>
+    <h d="2014-12-18" t="19:33" id="113835" u="0041" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:33" id="113832" u="0004" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:04" id="113636" u="001e" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:03" id="113633" u="0021" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:02" id="113632" u="0008" w="141204acc8c877"/>
+    <h d="2014-12-18" t="19:01" id="113609" u="001a" w="141204acc8c877"/>
+  </history>
+</ksk>

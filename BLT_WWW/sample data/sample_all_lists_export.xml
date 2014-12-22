@@ -1,0 +1,122 @@
+<ksk date="2014-12-21" time="22:06">
+  <classes>
+    <c id="08" v="mage"/>
+    <c id="09" v="warlock"/>
+    <c id="00" v="unknown"/>
+    <c id="10" v="monk"/>
+    <c id="07" v="shaman"/>
+    <c id="06" v="deathknight"/>
+    <c id="05" v="priest"/>
+    <c id="04" v="rogue"/>
+    <c id="02" v="paladin"/>
+    <c id="03" v="hunter"/>
+    <c id="11" v="druid"/>
+    <c id="01" v="warrior"/>
+  </classes>
+  <users>
+    <u id="003f" n="Fatalityx-aeriepeak" c="02"/>
+    <u id="0007" n="Bigpub-aeriepeak" c="07"/>
+    <u id="003d" n="Eolasdorf-aeriepeak" c="02"/>
+    <u id="0040" n="Fharakin-aeriepeak" c="09"/>
+    <u id="000a" n="Matheist-aeriepeak" c="01"/>
+    <u id="000b" n="Rhýse-aeriepeak" c="02"/>
+    <u id="0022" n="Shmlangela-aeriepeak" c="08"/>
+    <u id="0042" n="Meattorpedo-aeriepeak" c="09"/>
+    <u id="0020" n="Rile-aeriepeak" c="01"/>
+    <u id="0002" n="Tels-aeriepeak" c="10"/>
+    <u id="003b" n="Annavida-aeriepeak" c="03"/>
+    <u id="0019" n="Aristà-aeriepeak" c="03"/>
+    <u id="0045" n="Tsunande-aeriepeak" c="01"/>
+    <u id="001a" n="Arlonath-aeriepeak" c="05"/>
+    <u id="0008" n="Buntcitch-aeriepeak" c="06"/>
+    <u id="003c" n="Bleachmeat-aeriepeak" c="06"/>
+    <u id="001e" n="Palmie-aeriepeak" c="10"/>
+    <u id="0041" n="Gnoam-aeriepeak" c="08"/>
+    <u id="0001" n="Zeniah-aeriepeak" c="11"/>
+    <u id="0023" n="Thaumagon-aeriepeak" c="08"/>
+    <u id="0021" n="Scoobisnacks-aeriepeak" c="02"/>
+    <u id="001d" n="Hufur-aeriepeak" c="03"/>
+    <u id="001f" n="Ricebucket-aeriepeak" c="04"/>
+    <u id="0044" n="Sneathe-aeriepeak" c="09"/>
+  </users>
+  <lists>
+    <list id="141204acc8c877" n="Armor">
+      <u id="003f"/>
+      <u id="0007"/>
+      <u id="003d"/>
+      <u id="0040"/>
+      <u id="000a"/>
+      <u id="000b"/>
+      <u id="0022"/>
+      <u id="0042"/>
+      <u id="0020"/>
+      <u id="0002"/>
+      <u id="003b"/>
+      <u id="0019"/>
+      <u id="0045"/>
+      <u id="001a"/>
+      <u id="0008"/>
+      <u id="003c"/>
+      <u id="001e"/>
+      <u id="0041"/>
+      <u id="0001"/>
+      <u id="0023"/>
+      <u id="0021"/>
+      <u id="001d"/>
+      <u id="001f"/>
+      <u id="0044"/>
+    </list>
+    <list id="141204c169ee12" n="Misc">
+      <u id="001a"/>
+      <u id="0040"/>
+      <u id="0041"/>
+      <u id="0020"/>
+      <u id="0042"/>
+      <u id="0044"/>
+      <u id="0019"/>
+      <u id="0045"/>
+      <u id="001d"/>
+      <u id="003f"/>
+      <u id="0022"/>
+      <u id="003d"/>
+      <u id="000b"/>
+      <u id="001f"/>
+      <u id="000a"/>
+      <u id="001e"/>
+      <u id="0021"/>
+      <u id="0023"/>
+      <u id="0001"/>
+      <u id="0007"/>
+      <u id="003c"/>
+      <u id="003b"/>
+      <u id="0008"/>
+      <u id="0002"/>
+    </list>
+    <list id="14120407f93132" n="Weapon">
+      <u id="0007"/>
+      <u id="000a"/>
+      <u id="001a"/>
+      <u id="0040"/>
+      <u id="0019"/>
+      <u id="0044"/>
+      <u id="003d"/>
+      <u id="000b"/>
+      <u id="0008"/>
+      <u id="0023"/>
+      <u id="003c"/>
+      <u id="001e"/>
+      <u id="0041"/>
+      <u id="003b"/>
+      <u id="0021"/>
+      <u id="001d"/>
+      <u id="003f"/>
+      <u id="0042"/>
+      <u id="0020"/>
+      <u id="0001"/>
+      <u id="0002"/>
+      <u id="0045"/>
+      <u id="001f"/>
+      <u id="0022"/>
+    </list>
+  </lists>
+</ksk>

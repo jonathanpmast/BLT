@@ -90,6 +90,10 @@
     <Content Include="packages.config" />
     <Content Include="Config\nlogweb.config" />
     <None Include="Parameters.xml" />
+    <None Include="sample data\sample_all_lists_export.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sample data\sample_history_export.xml" />
     <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\sk\index.cshtml" />
     <None Include="Properties\PublishProfiles\Package.pubxml" />
