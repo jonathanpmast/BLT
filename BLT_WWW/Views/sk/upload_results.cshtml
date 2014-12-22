@@ -1,0 +1,47 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.Core.Import.KSKListImportResult>
+@{
+    Layout = "_layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>This is what you uploaded</h1>
+    </div>
+    <div>Export taken on @Model.ExportDate</div>
+    <div>
+        Classes:
+        <ul>
+            @foreach (var c in @Model.Classes)
+            {
+                <li>@c.Name -- @c.Id</li>
+            }
+        </ul>
+    </div>
+    <div>
+        Users:
+        <ul>
+            @foreach (var u in @Model.Users)
+            {
+                <li>@u.Name -- @u.Class.Name (@u.Id)</li>
+            }
+        </ul>
+    </div>
+    <div>
+        Lists:
+        <ul>
+            @foreach (var l in @Model.Lists)
+            {
+                <li>
+                    @l.Name -- @l.Id
+                    <ul>
+                        @foreach (var u in l.Users)
+                        {
+                            <li>@u.User.Name -- @u.User.Class.Name (@u.User.Id)</li>
+                        }
+                    </ul>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

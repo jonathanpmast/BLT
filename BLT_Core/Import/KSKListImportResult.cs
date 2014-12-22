@@ -34,7 +34,33 @@ namespace BLT.Core.Import
             result.ExportDate += ts;
             
             // get a collection of the exported classes
+            result.Classes.AddRange(from el in root.Element(Constants.ElementNames.CLASSES).Elements(Constants.ElementNames.CLASS)
+                                    select new ImportClass()
+                                    {
+                                        Id = int.Parse(el.Attribute("id").Value),
+                                        Name = el.Attribute("v").Value
+                                    });
 
+            // get the users
+            result.Users.AddRange(from el in root.Element(Constants.ElementNames.USERS).Elements(Constants.ElementNames.USER)
+                                  select new ImportUser()
+                                  {
+                                      Id = el.Attribute("id").Value,
+                                      Name = el.Attribute("n").Value,
+                                      Class = result.Classes.FirstOrDefault(c => c.Id == int.Parse(el.Attribute("c").Value))
+                                  });
+
+            // get the lootwheels
+            result.Lists.AddRange(from el in root.Element(Constants.ElementNames.LISTS).Elements(Constants.ElementNames.LIST)
+                                  select new ImportList()
+                                  {
+                                      Id = el.Attribute("id").Value,
+                                      Name = el.Attribute("n").Value,
+                                      Users = new List<ImportListUser>(
+                                          from elUser in el.Elements(Constants.ElementNames.USER)                                        
+                                          select new ImportListUser(){ User = result.Users.FirstOrDefault(u => u.Id == elUser.Attribute("id").Value)}
+                                          )
+                                  });            
             return result;
         }
     }

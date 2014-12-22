@@ -10,6 +10,11 @@ namespace BLT.Core.Import
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        List<ImportUser> Users { get; set; }
+        public List<ImportListUser> Users { get; set; }
+
+        public ImportList()
+        {
+            Users = new List<ImportListUser>();
+        }
     }
 }

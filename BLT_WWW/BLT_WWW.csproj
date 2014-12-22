@@ -97,6 +97,8 @@
     <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\sk\index.cshtml" />
     <None Include="Properties\PublishProfiles\Package.pubxml" />
+    <Content Include="Views\sk\admin.cshtml" />
+    <Content Include="Views\sk\upload_results.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +115,7 @@
     <Compile Include="LootWheelModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\UploadResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLT_Core\BLT_Core.csproj">

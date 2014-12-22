@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_layout.cshtml";
+}
+
+<div class="container">
+    <div class="page-header">
+        <h1>Do Admin Stuff.</h1>
+    </div>
+    <form action="~/sk/admin/upload" method="POST" enctype="multipart/form-data">
+        <input name="lootlistfile" type="file" size="40" />
+
+        <input type="submit" value="Submit!" />
+    </form>
+</div>
+
+
