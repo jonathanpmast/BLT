@@ -49,6 +49,7 @@
     <Compile Include="Import\KSKImport.cs" />
     <Compile Include="Import\KSKListImportResult.cs" />
     <Compile Include="Import\ImportListUser.cs" />
+    <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\LootWheel.cs" />
     <Compile Include="Models\TestModel.cs" />

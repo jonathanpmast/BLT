@@ -20,7 +20,7 @@
                 return View["sk/index.cshtml", tm];
             };
 
-            Get["/admin"] = _ =>
+            Get["/admin/ksk"] = _ =>
             {                
                 logger.Debug("Get: admin (/admin)");
                 return View["sk/admin.cshtml"];
