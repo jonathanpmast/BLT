@@ -86,6 +86,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin.css" />
     <Content Include="Content\app.css" />
     <Content Include="packages.config" />
     <Content Include="Config\nlogweb.config" />
