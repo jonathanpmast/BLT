@@ -5,14 +5,15 @@
     <link type="text/css" href="~/Content/admin.css" rel="stylesheet" />
 }
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-pills nav-stacked nav-sidebar">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
+                <li role="presentation" class="active"><a href="~/admin/ksk">Upload KSK Exports</a></li>                
             </ul>
+        </div>
+        <div class="admin-body col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+            @RenderBody()
         </div>
     </div>
 </div>
