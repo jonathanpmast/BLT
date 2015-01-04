@@ -1,6 +1,8 @@
 ﻿using BLT.Core.Import;
 using BLT.Core.Logging;
+using BLT.WWW.ViewModels;
 using Nancy;
+using Nancy.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +29,7 @@ namespace BLT.WWW
                 logger.Debug("Post: ksk/upload (/ksk/upload)");
                 var file = this.Request.Files.FirstOrDefault();
                 string contents = string.Empty;
+                KSKUploadResults results = new KSKUploadResults();
                 if (file == null)
                 {
                     throw new Exception("You didn't upload a file! I probably should catch this exception earlier!");
@@ -38,9 +41,17 @@ namespace BLT.WWW
                     logger.Debug("Post: ksk/upload: succesfully read file contents");
                 }
                 logger.Debug("Post: ksk/upload: parsing XML with ListImportResult class");
-                KSKListImportResult results = KSKListImportResult.Load(contents);
+                results.ImportData = KSKListImportResult.Load(contents);
                 logger.Debug("Post: ksk/upload: (ksk/upload) done");
                 return View["admin/lootwheel_upload.cshtml", results];
+            };
+
+            Post["/ksk/save"] = _ =>
+            {
+                logger.Debug("Post: ksk/save (/ksk/save)");
+                KSKSaveViewModel vm = this.Bind<KSKSaveViewModel>();
+                
+
             };
         }
     }

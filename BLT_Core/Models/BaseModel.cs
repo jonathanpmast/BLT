@@ -8,8 +8,8 @@ namespace BLT.Core.Models
 {
     public abstract class BaseModel
     {
-        long ID { get; set; }
-        DateTime DateUpdated { get; set; }
-        DateTime DateCreated { get; set; }
+        public long ID { get; set; }
+        public DateTime DateUpdated { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }

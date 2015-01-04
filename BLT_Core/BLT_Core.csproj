@@ -51,6 +51,7 @@
     <Compile Include="Import\ImportListUser.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\CharacterClass.cs" />
     <Compile Include="Models\LootWheel.cs" />
     <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
