@@ -50,8 +50,9 @@ namespace BLT.WWW
             {
                 logger.Debug("Post: ksk/save (/ksk/save)");
                 KSKSaveViewModel vm = this.Bind<KSKSaveViewModel>();
-                
 
+                logger.Debug("Post: ksk/save (/ksk/save) done");
+                return View["admin/lootwheel_save.cshtml", vm];
             };
         }
     }
