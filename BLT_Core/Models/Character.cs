@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BLT.Core.Models
 {
-    public class Character
+    public class Character : BaseModel
     {
         public string Name { get; set; }
         public virtual Character Parent { get; set; }
-        public string Class { get; set; }
-
+        public CharacterClass Class { get; set; }
+        public string ServerName { get; set; }
     }
 }

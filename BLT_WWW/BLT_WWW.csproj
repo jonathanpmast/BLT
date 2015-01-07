@@ -141,6 +141,10 @@
     <Compile Include="ViewModels\KSKUploadResults.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLT.Data\BLT.Data.csproj">
+      <Project>{2fe73b2f-258d-45bf-b6bb-3a7b58680444}</Project>
+      <Name>BLT.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLT_Core\BLT_Core.csproj">
       <Project>{f990496b-63a7-468b-8d3f-25f2672dafe3}</Project>
       <Name>BLT_Core</Name>

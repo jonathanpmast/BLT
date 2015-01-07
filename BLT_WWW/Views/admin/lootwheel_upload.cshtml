@@ -1,7 +1,7 @@
 ﻿@using BLT.WWW.Serialization;
-@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.UploadResults>
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.KSKUploadResults>
 @{
-    Layout = "_layout.cshtml";
+    Layout = "/admin/_adminlayout.cshtml";
 }
 
 
@@ -11,39 +11,46 @@
     </div>
     <div>Export taken on @Model.ImportData.ExportDate</div>
     <div>
-        Classes:
-        <ul>
-            @foreach (var c in @Model.ImportData.Classes)
-            {
-                <li>@c.Name -- @c.Id</li>
-            }
-        </ul>
-    </div>
-    <div>
-        Users:
+        The following Characters have not been seen before:
+
         <ul>
             @foreach (var u in @Model.ImportData.Users)
             {
-                <li>@u.Name -- @u.Class.Name (@u.Id)</li>
+                if (!u.IsInDatabase)
+                {
+                    <li>
+                        @u.Name -- @u.Class.Name (@u.Id)
+                    </li>
+                }
             }
         </ul>
+
     </div>
-    <div>
+
+
+
+    <div role="tabpanel">
         Lists:
-        <ul>
+        <ul class="nav-sidebar nav-tabs" role="tablist">
             @foreach (var l in @Model.ImportData.Lists)
             {
-                <li>
-                    @l.Name -- @l.Id
-                    <ul>
-                        @foreach (var u in l.Users)
-                        {
-                            <li>@u.User.Name -- @u.User.Class.Name (@u.User.Id)</li>
-                        }
-                    </ul>
+                <li role="presentation">
+                    <a href="#@l.Name" aria-controls="@l.Name" role="tab" data-toggle="tab">@l.Name</a>
                 </li>
             }
         </ul>
     </div>
+    <div class="tab-content">
+        @foreach (var l in @Model.ImportData.Lists)
+        {
+            <div role="tabpanel" class="tab-pane" id="@l.Name">
+                <ul>
+                    @foreach (var u in l.Users)
+                    {
+                        <li>@u.User.Name -- @u.User.Class.Name (@u.User.Id)</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
 </div>
-<input type="hidden" name="ImportData" id="ImportData" value="@Model.ImportData.ToJson()" />

@@ -11,5 +11,6 @@ namespace BLT.Core.Import
         public string Id { get; set; }
         public string Name { get; set; }
         public ImportClass Class { get; set; }
+        public bool IsInDatabase { get; set; }
     }
 }

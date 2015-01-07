@@ -42,6 +42,7 @@ namespace BLT.WWW
                 }
                 logger.Debug("Post: ksk/upload: parsing XML with ListImportResult class");
                 results.ImportData = KSKListImportResult.Load(contents);
+                results.CheckAgainstDatabase();
                 logger.Debug("Post: ksk/upload: (ksk/upload) done");
                 return View["admin/lootwheel_upload.cshtml", results];
             };
