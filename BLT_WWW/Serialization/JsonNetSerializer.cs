@@ -43,4 +43,12 @@ namespace BLT.WWW.Serialization
             get { yield return "json"; }
         }
     }
+
+    public static class JsonSerializationExtensions
+    {
+        public static string ToJson(this object obj)
+        {
+            return JsonConvert.SerializeObject(obj, JsonNetSerializer.SERIALIZATION_SETTINGS);
+        }
+    }
 }

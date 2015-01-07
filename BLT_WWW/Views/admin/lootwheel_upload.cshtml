@@ -3,54 +3,43 @@
 @{
     Layout = "/admin/_adminlayout.cshtml";
 }
-
-
-<div class="container">
-    <div class="page-header">
-        <h1>This is what you uploaded</h1>
-    </div>
-    <div>Export taken on @Model.ImportData.ExportDate</div>
-    <div>
-        The following Characters have not been seen before:
-
-        <ul>
-            @foreach (var u in @Model.ImportData.Users)
-            {
-                if (!u.IsInDatabase)
-                {
-                    <li>
-                        @u.Name -- @u.Class.Name (@u.Id)
-                    </li>
-                }
-            }
-        </ul>
-
-    </div>
-
-
-
-    <div role="tabpanel">
-        Lists:
-        <ul class="nav-sidebar nav-tabs" role="tablist">
+<div class="container-fluid">
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-sm-3 col-md-2">Export Date: </label>
+                <div class="col-sm-9 col-md-10">
+                    <p class="form-control-static">@Model.ImportData.ExportDate</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             @foreach (var l in @Model.ImportData.Lists)
             {
-                <li role="presentation">
-                    <a href="#@l.Name" aria-controls="@l.Name" role="tab" data-toggle="tab">@l.Name</a>
-                </li>
+                <div class="col-sm-6 col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">@l.Name</div>
+
+                        <ul class="list-group">                            
+                                @for (int i = 0; i < l.Users.Count; i++)
+                                {
+                                   
+                                <li class="list-group-item">
+                                    @if (!l.Users[i].User.IsInDatabase)
+                                    {
+                                        <span class="label label-default">New</span>
+                                    }
+                                    @(i + 1).&nbsp;@l.Users[i].User.Name.Split('-')[0] -- @l.Users[i].User.Class.Name
+                                </li>
+                                }                                
+                            </ul>
+
+                        </div>
+
+                    </div>
+
             }
-        </ul>
-    </div>
-    <div class="tab-content">
-        @foreach (var l in @Model.ImportData.Lists)
-        {
-            <div role="tabpanel" class="tab-pane" id="@l.Name">
-                <ul>
-                    @foreach (var u in l.Users)
-                    {
-                        <li>@u.User.Name -- @u.User.Class.Name (@u.User.Id)</li>
-                    }
-                </ul>
-            </div>
-        }
-    </div>
+        </div>
+
+    </form>
 </div>
