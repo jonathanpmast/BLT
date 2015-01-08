@@ -17,6 +17,7 @@ namespace BLT.WWW
         public AdminModule()
             : base("admin")
         {
+            Get["/"] = _ => View["admin/index.cshtml"];
             Get["/ksk"] = _ =>
             {
                 logger.Debug("Get: admin/ksk (/ksk)");
@@ -42,7 +43,7 @@ namespace BLT.WWW
                 }
                 logger.Debug("Post: ksk/upload: parsing XML with ListImportResult class");
                 results.ImportData = KSKListImportResult.Load(contents);
-                results.CheckAgainstDatabase();
+                results.CheckUsersAgainstDatabase();
                 logger.Debug("Post: ksk/upload: (ksk/upload) done");
                 return View["admin/lootwheel_upload.cshtml", results];
             };

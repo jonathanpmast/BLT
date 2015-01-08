@@ -119,6 +119,7 @@
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\admin\_adminlayout.cshtml" />
     <Content Include="Views\admin\lootwheel_save.cshtml" />
+    <Content Include="Views\admin\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

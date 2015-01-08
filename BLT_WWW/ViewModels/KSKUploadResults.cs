@@ -11,7 +11,7 @@ namespace BLT.WWW.ViewModels
     public class KSKUploadResults
     {
         public KSKListImportResult ImportData { get; set; }
-        public void CheckAgainstDatabase()
+        public void CheckUsersAgainstDatabase()
         {
             using (BLTContext context = new BLTContext())
             {
@@ -26,6 +26,17 @@ namespace BLT.WWW.ViewModels
                         user.IsInDatabase = true;
                     }
                 }
+            }
+        }
+
+        public bool HasNewCharacters
+        {
+            get
+            {
+                if (ImportData.Users == null || ImportData.Users.Count == 0)
+                    return false;
+
+                return ImportData.Users.Any(c => !c.IsInDatabase);
             }
         }
     }
