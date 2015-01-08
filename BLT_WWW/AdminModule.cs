@@ -14,7 +14,7 @@ namespace BLT.WWW
     public class AdminModule :NancyModule
     {
         private readonly static ILog logger = LogProvider.GetCurrentClassLogger();
-        public AdminModule()
+        public AdminModule(IRootPathProvider rootPathProvider)
             : base("admin")
         {
             Get["/"] = _ => View["admin/index.cshtml"];
@@ -22,6 +22,17 @@ namespace BLT.WWW
             {
                 logger.Debug("Get: admin/ksk (/ksk)");
                 return View["admin/lootwheel.cshtml"];
+
+            };
+
+            Get["/ksk/upload"] = _ =>
+            {
+                // this is just for testing!
+                string contents = File.ReadAllText(Path.Combine(rootPathProvider.GetRootPath(), @"sample data", "sample_all_lists_export.xml"));
+                KSKUploadResults results = new KSKUploadResults();
+                results.ImportData = KSKListImportResult.Load(contents);
+                results.CheckUsersAgainstDatabase();
+                return View["admin/lootwheel_upload.cshtml", results];
 
             };
 
