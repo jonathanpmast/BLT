@@ -9,18 +9,18 @@ namespace BLT.Data.Seed
 {
     internal static class Lookups
     {
-        private static readonly string[] CLASSES = {
-                                                       "Death Knight",
-                                                       "Priest",
-                                                       "Rogue",
-                                                       "Monk",
-                                                       "Warrior",
-                                                       "Druid",
-                                                       "Paladin",
-                                                       "Shaman",
-                                                       "Mage",
-                                                       "Hunter",
-                                                       "Warlock"
+        private static readonly Dictionary<string,string> CLASSES = new Dictionary<string,string>(){
+                                                       {"Death Knight","deathknight"},
+                                                       {"Priest","priest"},
+                                                       {"Rogue","rogue"},
+                                                       {"Monk","monk"},
+                                                       {"Warrior","warrior"},
+                                                       {"Druid","druid"},
+                                                       {"Paladin","paladin"},
+                                                       {"Shaman","shaman"},
+                                                       {"Mage","mage"},
+                                                       {"Hunter","hunter"},
+                                                       {"Warlock","warlock"}
                                                    };
         internal static void Seed(BLTContext context)
         {
@@ -32,9 +32,9 @@ namespace BLT.Data.Seed
 
             context.SaveChanges();
 
-            foreach (string c in CLASSES)
+            foreach (var c in CLASSES)
             {
-                context.Classes.Add(new CharacterClass() { Name = c }); 
+                context.Classes.Add(new CharacterClass() { Name = c.Key, KSKExportName = c.Value }); 
             }
             context.SaveChanges();
         }

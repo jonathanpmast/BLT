@@ -6,10 +6,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using BLT.WWW.Serialization;
+using System.Text;
 namespace BLT.WWW.ViewModels
 {
     public class KSKUploadResults
     {
+        public string EncodedImportData
+        {
+            get
+            {
+                
+                
+                byte[] bytes = System.Text.Encoding.UTF32.GetBytes(ImportData.ToJson());
+                return Convert.ToBase64String(bytes);
+                
+            }
+        }
         public KSKListImportResult ImportData { get; set; }
         public void CheckUsersAgainstDatabase()
         {

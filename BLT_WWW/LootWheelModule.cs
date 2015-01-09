@@ -7,6 +7,7 @@
     using System.Linq;
     using System.IO;
     using System;
+    using BLT.WWW.ViewModels.sk;
     public class LootWheelModule : NancyModule
     {
         private readonly static ILog logger = LogProvider.GetCurrentClassLogger();
@@ -16,8 +17,9 @@
             Get["/"] = _ =>
             {
                 logger.Debug("Get: Lootwheel (/sk)");
-                TestModel tm = new TestModel() { Message = System.Web.Configuration.WebConfigurationManager.AppSettings["TestKey"] };
-                return View["sk/index.cshtml", tm];
+                LootWheelIndexViewModel vm = new LootWheelIndexViewModel();
+                vm.GetLootWheels();
+                return View["sk/index.cshtml",vm];
             };
 
             

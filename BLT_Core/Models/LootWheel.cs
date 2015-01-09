@@ -10,11 +10,11 @@ namespace BLT.Core.Models
     {
         public string Title { get; set; }
         public DateTime ExportDate { get; set; }
-        public List<Character> CharacterList{get; private set;}
+        public virtual IList<LootWheelPosition> CharacterPositions{get; set;}
 
         public LootWheel()
         {
-            CharacterList = new List<Character>();
+            CharacterPositions = new List<LootWheelPosition>();
         }
 
     }

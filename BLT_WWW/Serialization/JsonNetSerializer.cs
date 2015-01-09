@@ -50,5 +50,10 @@ namespace BLT.WWW.Serialization
         {
             return JsonConvert.SerializeObject(obj, JsonNetSerializer.SERIALIZATION_SETTINGS);
         }
+
+        public static T FromJson<T>(this string str)
+        {
+            return JsonConvert.DeserializeObject<T>(str);
+        }
     }
 }

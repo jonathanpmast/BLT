@@ -9,6 +9,7 @@ namespace BLT.Core.Models
     public class CharacterClass : BaseModel
     {
         public string Name { get; set; }
+        public string KSKExportName { get; set; }
 
     }
 }

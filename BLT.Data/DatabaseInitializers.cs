@@ -8,7 +8,7 @@ using System.Data.Entity;
 using BLT.Core.Logging;
 namespace BLT.Data
 {
-    public class DevInitializer : DropCreateDatabaseIfModelChanges<BLTContext>
+    public class DevInitializer : DropCreateDatabaseAlways<BLTContext>
     {
         private readonly static ILog Logger = LogProvider.GetCurrentClassLogger();
         protected override void Seed(BLTContext context)

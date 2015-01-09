@@ -114,12 +114,13 @@
     <None Include="sample data\sample_history_export.xml" />
     <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\sk\index.cshtml" />
-    <Content Include="Views\admin\lootwheel.cshtml" />
-    <Content Include="Views\admin\lootwheel_upload.cshtml" />
+    <Content Include="Views\admin\ksk\lootwheel_upload.cshtml" />
+    <Content Include="Views\admin\ksk\lootwheel_confirm.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\admin\_adminlayout.cshtml" />
-    <Content Include="Views\admin\lootwheel_save.cshtml" />
+    <Content Include="Views\admin\ksk\lootwheel_save.cshtml" />
     <Content Include="Views\admin\index.cshtml" />
+    <Content Include="Views\admin\ksk\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -139,8 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\JsonNetSerializer.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\KSKSaveViewModel.cs" />
-    <Compile Include="ViewModels\KSKUploadResults.cs" />
+    <Compile Include="ViewModels\admin\KSKSaveViewModel.cs" />
+    <Compile Include="ViewModels\admin\KSKUploadResults.cs" />
+    <Compile Include="ViewModels\sk\LootWheelIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLT.Data\BLT.Data.csproj">

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.Migrations.History;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,7 @@ namespace BLT.Data
         private readonly static ILog Logger = LogProvider.GetCurrentClassLogger();
 
         public IDbSet<CharacterClass> Classes { get; set; }
-        public IDbSet<Character> Characters { get; set; }
+        public IDbSet<PlayerCharacter> Characters { get; set; }
         public IDbSet<LootWheel> LootWheel { get; set; }
         public BLTContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
@@ -60,8 +61,9 @@ namespace BLT.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);            
-
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
         private void initialize()

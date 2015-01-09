@@ -1,10 +1,32 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.Core.Models.TestModel>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.sk.LootWheelIndexViewModel>
 @{
-    Layout = "_layout.cshtml";   
+    Layout = "_layout.cshtml";
 }
 
 
 <div class="container">
-    This screen is going to show the most recent loot wheel as of some particular date.
+    <div class="row">
+        @foreach (var l in @Model.LootWheels)
+        {
+            <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">@l.Title</div>
 
+                    <ul class="list-group">
+                        @foreach (var cp in l.CharacterPositions)
+                        {
+                            <li class="list-group-item">
+                                @cp.Position .&nbsp;@cp.PlayerCharacter.Name -- @cp.PlayerCharacter.Class.Name
+                            </li>
+                        }
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+        }
+    </div>
 </div>
