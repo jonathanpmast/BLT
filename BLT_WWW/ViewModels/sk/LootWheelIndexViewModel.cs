@@ -5,6 +5,7 @@ using System.Web;
 
 using BLT.Core.Models;
 using BLT.Data;
+using System.Data.Entity;
 
 namespace BLT.WWW.ViewModels.sk
 {
@@ -19,10 +20,12 @@ namespace BLT.WWW.ViewModels.sk
         {
             using (BLTContext context = new BLTContext())
             {
-                var groups = (from lw in context.LootWheel
+                
+                var groups = (from lw in context.LootWheel.Include( lw => lw.CharacterPositions )
                               orderby lw.DateCreated descending
                               group lw by lw.Title into lootWheelByTitle
                               select lootWheelByTitle);
+                
                 LootWheels = new List<LootWheel>();
                 
                 foreach (var group in groups)

@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLT_WWW", "BLT_WWW\BLT_WWW.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLT.Data", "BLT.Data\BLT.Data.csproj", "{2FE73B2F-258D-45BF-B6BB-3A7B58680444}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLT.WWW.Admin", "BLT.WWW.Admin\BLT.WWW.Admin.csproj", "{81E2AF6C-F3EA-4564-82D8-8445AE0070A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{2FE73B2F-258D-45BF-B6BB-3A7B58680444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FE73B2F-258D-45BF-B6BB-3A7B58680444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FE73B2F-258D-45BF-B6BB-3A7B58680444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E2AF6C-F3EA-4564-82D8-8445AE0070A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E2AF6C-F3EA-4564-82D8-8445AE0070A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E2AF6C-F3EA-4564-82D8-8445AE0070A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E2AF6C-F3EA-4564-82D8-8445AE0070A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
