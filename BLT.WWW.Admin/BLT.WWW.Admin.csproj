@@ -28,7 +28,6 @@
     <Content Include="main.js" />
     <Content Include="nav.js" />
     <Content Include="templates\ko_templates.tmpl.js" />
-    <Content Include="main2.js" />
     <Content Include="routes.js" />
     <Content Include="templates\test1.tmpl.html" />
     <Content Include="templates\test2.tmpl.html" />
