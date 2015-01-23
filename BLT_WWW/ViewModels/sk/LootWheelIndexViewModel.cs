@@ -31,7 +31,8 @@ namespace BLT.WWW.ViewModels.sk
                 foreach (var group in groups)
                 {
                     LootWheels.Add(group.First());
-                }                                
+                }
+                ;
             }
         }
     }

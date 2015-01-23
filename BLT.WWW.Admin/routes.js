@@ -16,7 +16,7 @@ var router = function () {
         console.log(arg3);
     }
 
-    function init() {
+    this.init = function _init() {
         var routes = {
             '/test1': debug,
             '/test2': debug,
@@ -24,14 +24,14 @@ var router = function () {
         };
         dRouter = new director.Router(routes);
         dRouter.configure({
-            on: debug
+            on: debug,
+            html5history: false
         });
 
         routeChangeSub = postal.subscribe({
             channel: "navigation",
             topic: "change",
-            callback: function routeChangeCallback(data) {
-                alert('worked');
+            callback: function routeChangeCallback(data) {                
                 navigateTo(data.url);
             }
         });
