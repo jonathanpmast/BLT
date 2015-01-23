@@ -1,5 +1,6 @@
 ﻿var director = require('director');
 var postal = require('postal');
+var vmm = require('./vm/ViewModelManager.js');
 var router = function () {
     var dRouter;
     var routeChangeSub
@@ -10,28 +11,40 @@ var router = function () {
         dRouter.setRoute(url);
     };
 
-    function debug(arg1, arg2, arg3) {
-        console.log(arg1);
-        console.log(arg2);
-        console.log(arg3);
+    function debug() {
+        console.log(this.getRoute());
+    }
+
+    function routeChange() {
+        // get vm, push it to the channel
+        var route = this.getRoute().join('/');
+        var vm = vmm.get(route);
+        postal.publish({
+            channel: "navigation",
+            topic: "changed",
+            data: {
+                template: route,
+                viewModel: vm
+            }
+        });
     }
 
     this.init = function _init() {
         var routes = {
-            '/test1': debug,
-            '/test2': debug,
-            '/test3': debug
+            '/test1': routeChange,
+            '/test2': routeChange,
+            '/test3': routeChange
         };
         dRouter = new director.Router(routes);
         dRouter.configure({
-            on: debug,
+
             html5history: false
         });
 
         routeChangeSub = postal.subscribe({
             channel: "navigation",
             topic: "change",
-            callback: function routeChangeCallback(data) {                
+            callback: function routeChangeCallback(data) {
                 navigateTo(data.url);
             }
         });

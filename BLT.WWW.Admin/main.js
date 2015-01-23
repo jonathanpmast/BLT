@@ -2,9 +2,14 @@
 var templateEngine = require('./koTemplateEngine.js');
 var appvm = require('./vm/AppViewModel.js');
 var koTemplates = require('./ko_templates.js');
-var routes = require('./routes.js');
+var router = require('./routes.js');
+router = new router();
+var vmm = require('./vm/ViewModelManager.js');
 
-var router = new routes();
+vmm.register('test1', require('./vm/TestOneVm.js'));
+vmm.register('test2', require('./vm/TestTwoVm.js'));
+vmm.register('test3', require('./vm/TestThreeVm.js'));
+
 templateEngine(ko);
 koTemplates(ko)
 router.init();
