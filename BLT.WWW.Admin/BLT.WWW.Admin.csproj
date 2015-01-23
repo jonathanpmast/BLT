@@ -27,11 +27,14 @@
     <Content Include="ko_templates.js" />
     <Content Include="main.js" />
     <Content Include="nav.js" />
+    <Content Include="templates\empty.tmpl.html" />
     <Content Include="templates\ko_templates.tmpl.js" />
     <Content Include="routes.js" />
+    <Content Include="templates\nav.tmpl.html" />
     <Content Include="templates\test1.tmpl.html" />
     <Content Include="templates\test2.tmpl.html" />
     <Content Include="templates\test3.tmpl.html" />
+    <Content Include="vm\NavViewModel.js" />
     <Content Include="vm\TestOneVm.js" />
     <Content Include="vm\TestThreeVm.js" />
     <Content Include="vm\TestTwoVm.js" />

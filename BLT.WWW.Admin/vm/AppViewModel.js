@@ -1,10 +1,10 @@
 ﻿var ko = require('knockout');
-var signals = require('signals');
+var navVM = require('./NavViewModel.js');
 
 function AppViewModel() {
-    this.CurrentViewModel = ko.observable(null);
-    this.CurrentTemplate = ko.observable('');
-    
+    this.CurrentViewModel = ko.observable({});
+    this.CurrentTemplate = ko.observable('empty');
+    this.NavViewModel = ko.observable(new navVM());
 }
 
 module.exports = AppViewModel;

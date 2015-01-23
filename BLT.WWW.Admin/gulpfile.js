@@ -10,6 +10,7 @@ var minifyCSS = require('gulp-minify-css');
 var watchify = require('watchify');
 var inject = require('gulp-inject');
 var rename = require('gulp-rename');
+var concatcss = require('gulp-concat-css');
 
 var config = {
     main: './main.js',
@@ -52,9 +53,12 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src(config.cssSrc + '/*.css')
-    .pipe(minifyCSS({ keepBreaks: true }))
-    .pipe(gulp.dest(config.out));
+    return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css',
+                     './node_modules/bootstrap/dist/css/bootstrap-theme.css',
+                     config.cssSrc + '/*.css'])
+        .pipe(concatcss('app.css'))
+        .pipe(minifyCSS({ keepBreaks: true }))
+        .pipe(gulp.dest(config.out));
 });
 
 gulp.task('browserSync', function () {

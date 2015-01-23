@@ -1,22 +1,42 @@
-﻿var signals = require('signals');
-var crossroads = require('crossroads');
-
+﻿var director = require('director');
+var postal = require('postal');
 var router = function () {
-    function onRouteChanged(newUrl) {
-        crossroads.parse(newUrl);
+    var dRouter;
+    var routeChangeSub
+    function navigateTo(url) {
+        //todo: listen to postal message and when navigation event fires... do stuff.
+        if (!dRouter)
+            throw "router not initialized.  :(";
+        dRouter.setRoute(url);
     };
 
+    function debug(arg1, arg2, arg3) {
+        console.log(arg1);
+        console.log(arg2);
+        console.log(arg3);
+    }
 
     function init() {
-        crossroads.routed.add(function (data) {
-            console.log(data);
+        var routes = {
+            '/test1': debug,
+            '/test2': debug,
+            '/test3': debug
+        };
+        dRouter = new director.Router(routes);
+        dRouter.configure({
+            on: debug
         });
 
-        crossroads.addRoute('/test1');
-        crossroads.addRoute('/test2');
-        crossroads.addRoute('/test3');
+        routeChangeSub = postal.subscribe({
+            channel: "navigation",
+            topic: "change",
+            callback: function routeChangeCallback(data) {
+                alert('worked');
+                navigateTo(data.url);
+            }
+        });
 
-        window.addEventListener("popstate", onRouteChanged, false);
+        dRouter.init();
     }
 };
 
