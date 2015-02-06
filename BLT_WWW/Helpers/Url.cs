@@ -2,10 +2,12 @@
 using System;
 using System.Text;
 
+using BLT.Core.Logging;
 namespace BLT.WWW.Helpers
 {
     public static class BltUrl
     {
+        private static readonly ILog logger = LogProvider.GetCurrentClassLogger();
         public static IHtmlString Content<T>(this HtmlHelpers<T> helper, string content)
         {
             string val = "";
@@ -15,7 +17,7 @@ namespace BLT.WWW.Helpers
 
 
         public static string Combine(params string[] parts)
-        {
+        {            
             if (parts == null || parts.Length == 0) return string.Empty;
             string url = "";
             foreach (var part in parts)
@@ -27,6 +29,7 @@ namespace BLT.WWW.Helpers
 
         private static string UrlCombine(string url1, string url2)
         {
+            logger.DebugFormat("Combining string {0} and {1}", url1, url2);
             if (url1.Length == 0)
             {
                 return url2;
