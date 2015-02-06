@@ -104,6 +104,17 @@
   <ItemGroup>
     <Content Include="Content\admin.css" />
     <Content Include="Content\app.css" />
+    <Content Include="Content\img\class_deathknight.jpg" />
+    <Content Include="Content\img\class_druid.jpg" />
+    <Content Include="Content\img\class_hunter.jpg" />
+    <Content Include="Content\img\class_mage.jpg" />
+    <Content Include="Content\img\class_monk.jpg" />
+    <Content Include="Content\img\class_paladin.jpg" />
+    <Content Include="Content\img\class_priest.jpg" />
+    <Content Include="Content\img\class_rogue.jpg" />
+    <Content Include="Content\img\class_shaman.jpg" />
+    <Content Include="Content\img\class_warlock.jpg" />
+    <Content Include="Content\img\class_warrior.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="packages.config" />
     <Content Include="Config\nlogweb.config" />
@@ -113,7 +124,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="sample data\sample_history_export.xml" />
-    <Content Include="Views\_layout.cshtml" />
+    <Content Include="Views\_layout_old.cshtml" />
     <Content Include="Views\sk\index.cshtml" />
     <Content Include="Views\admin\ksk\lootwheel_upload.cshtml" />
     <Content Include="Views\admin\ksk\lootwheel_confirm.cshtml" />
@@ -122,15 +133,14 @@
     <Content Include="Views\admin\ksk\lootwheel_save.cshtml" />
     <Content Include="Views\admin\index.cshtml" />
     <Content Include="Views\admin\ksk\index.cshtml" />
-    <Content Include="Views\_layout3.cshtml" />
-    <Content Include="Views\Home\index2.cshtml" />
+    <Content Include="Views\_layout.cshtml" />
+    <Content Include="Views\Home\recruiting.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Views\_layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

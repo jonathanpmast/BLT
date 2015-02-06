@@ -1,19 +1,39 @@
-﻿body {  
-  padding-bottom: 20px;
+﻿body {
+    padding-bottom: 20px;
 }
 
-.navbar-nav {
-    width: 100%;
-    text-align: center;
-  }
+@media (min-width:768px) {
 
-  .navbar-nav > li {
-    float: none;
-    display: inline-block;
-  }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+        .navbar-nav > li {
+            float: none;
+            display: inline-block;
+        }
+}
 
 .head-logo {
     background-image: url("img/logo.png");
-    height:100px;
-    width:315px;
+    height: 100px;
+    width: 315px;
+}
+
+.btn-apply {
+
+    height: 20px;
+    font-size: .7em;
+    padding-top:1px;
+    margin-left: 5px;
+}
+
+.recruitment-well {
+    min-width: 150px
+}
+
+.recruitment-well img {
+    height:28px;
+    width:28px;
 }
