@@ -11,7 +11,7 @@ namespace BLT.WWW.Helpers
         public static IHtmlString Content<T>(this HtmlHelpers<T> helper, string content)
         {
             string val = "";
-            val = Combine(helper.RenderContext.Context.Request.Url.BasePath, @"Content", content);
+            val = Combine(!string.IsNullOrWhiteSpace(helper.RenderContext.Context.Request.Url.BasePath) ? helper.RenderContext.Context.Request.Url.BasePath : @"/", @"Content", content);
             return new EncodedHtmlString(val);
         }
 
