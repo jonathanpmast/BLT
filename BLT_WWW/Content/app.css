@@ -1,4 +1,9 @@
-﻿body {
-  padding-top: 100px;
+﻿body {  
   padding-bottom: 20px;
+}
+
+.head-logo {
+    background-image: url("img/logo.png");
+    height:100px;
+    width:315px;
 }
