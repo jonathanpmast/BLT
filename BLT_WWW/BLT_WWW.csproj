@@ -122,6 +122,8 @@
     <Content Include="Views\admin\ksk\lootwheel_save.cshtml" />
     <Content Include="Views\admin\index.cshtml" />
     <Content Include="Views\admin\ksk\index.cshtml" />
+    <Content Include="Views\layout3.cshtml" />
+    <Content Include="Views\Home\index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

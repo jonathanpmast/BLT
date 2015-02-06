@@ -14,6 +14,11 @@ namespace BLT.WWW
             {
                 return View["Home/index.cshtml"];
             };
+
+            Get["/2"] = _ =>
+            {
+                return View["Home/index2.cshtml"];
+            };
         }
     }
 }
