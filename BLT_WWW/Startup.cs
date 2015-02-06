@@ -45,6 +45,7 @@
         {
             yield return "BLT.WWW";
             yield return "BLT.Core.Models";
+            yield return "BLT.WWW.Helpers";
         }
 
         public bool AutoIncludeModelNamespace

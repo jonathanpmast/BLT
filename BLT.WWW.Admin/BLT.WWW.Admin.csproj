@@ -31,10 +31,10 @@
     <Content Include="templates\ko_templates.tmpl.js" />
     <Content Include="routes.js" />
     <Content Include="templates\nav.tmpl.html" />
-    <Content Include="templates\test1.tmpl.html" />
+    <Content Include="templates\upload_ksk.html" />
     <Content Include="templates\test2.tmpl.html" />
     <Content Include="templates\test3.tmpl.html" />
-    <Content Include="vm\NavViewModel.js" />
+    <Content Include="nav\NavViewModel.js" />
     <Content Include="vm\TestOneVm.js" />
     <Content Include="vm\TestThreeVm.js" />
     <Content Include="vm\TestTwoVm.js" />
@@ -43,13 +43,17 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="gulpscripts\handleErrors.js" />
-    <Content Include="vm\AppViewModel.js" />
+    <Content Include="AppViewModel.js" />
+    <Content Include="vm\ViewModelManager.js" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

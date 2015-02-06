@@ -1,5 +1,5 @@
 ﻿var ko = require('knockout');
-var navVM = require('./NavViewModel.js');
+var navVM = require('./nav/NavViewModel.js');
 var postal = require('postal');
 function AppViewModel() {
     var self = this;
@@ -11,8 +11,7 @@ function AppViewModel() {
         channel: "navigation",
         topic: "changed",
         callback: function routeChanged(data) {
-            //self.CurrentTemplate('empty');
-            //self.C
+            
             self.CurrentViewModel(data.viewModel);
             self.CurrentTemplate(data.template);
         }

@@ -104,6 +104,7 @@
   <ItemGroup>
     <Content Include="Content\admin.css" />
     <Content Include="Content\app.css" />
+    <Content Include="Content\img\logo.png" />
     <Content Include="packages.config" />
     <Content Include="Config\nlogweb.config" />
     <None Include="Parameters.xml" />
@@ -127,6 +128,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Views\_layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">
@@ -135,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminModule.cs" />
+    <Compile Include="Helpers\Url.cs" />
     <Compile Include="HomeModule.cs" />
     <Compile Include="LootWheelModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,6 @@
 ﻿var ko = require('knockout');
 var templateEngine = require('./koTemplateEngine.js');
-var appvm = require('./vm/AppViewModel.js');
+var appvm = require('./AppViewModel.js');
 var koTemplates = require('./ko_templates.js');
 var router = require('./routes.js');
 router = new router();
