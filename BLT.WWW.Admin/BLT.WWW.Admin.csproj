@@ -20,7 +20,6 @@
   <ItemGroup>
     <Content Include="css\app.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="gulpscripts\browserify.js" />
     <Content Include="html\index.html" />
     <Content Include="karma.conf.js" />
     <Content Include="koTemplateEngine.js" />
@@ -38,6 +37,7 @@
     <Content Include="vm\TestOneVm.js" />
     <Content Include="vm\TestThreeVm.js" />
     <Content Include="vm\TestTwoVm.js" />
+    <Content Include="vm\VMFactory.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
