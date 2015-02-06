@@ -30,12 +30,12 @@ namespace BLT.WWW.Helpers
         private static string UrlCombine(string url1, string url2)
         {
             logger.DebugFormat("Combining string {0} and {1}", url1, url2);
-            if (url1.Length == 0)
+            if (string.IsNullOrWhiteSpace(url1))
             {
                 return url2;
             }
 
-            if (url2.Length == 0)
+            if (string.IsNullOrWhiteSpace(url2))
             {
                 return url1;
             }
