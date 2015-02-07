@@ -35,7 +35,8 @@ namespace BLT.WWW
                     });
                 return View["Home/index.cshtml", vm];
             };
-            ;
+
+            Get["/notrecruiting"] = _ => View["Home/index.cshtml", new HomeViewModel()];
         }
     }
 }

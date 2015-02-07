@@ -1,27 +1,43 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.HomeViewModel>
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">
-            Recruitment Openings
+            Recruitment Status
             <button class="btn btn-primary btn-apply">Apply!</button>
         </h3>
     </div>
     <div class="panel-body">
 
         <div class="row">
-            @foreach (var recruitmentNeed in @Model.RecruitingNeeds)
+            @if (@Model.RecruitingNeeds.Count > 0)
             {
-                <div class="col-md-12">
-                    <div class="media well well-sm recruitment-well">
-                        <div class="media-left media-middle">
-                            <img class="img-responsive img-rounded" src="@Html.Content(recruitmentNeed.IconUrl)" />
-                        </div>
-                        <div class="media-body">
-                            <h5 class="media-heading">@recruitmentNeed.ClassName</h5>
-                            Specs: <span class="text-success"><i>@recruitmentNeed.SpecsDisplay</i></span>
+                @foreach (var recruitmentNeed in @Model.RecruitingNeeds)
+                {
+                    <div class="col-md-12">
+                        <div class="media well well-sm recruitment-well">
+                            <div class="media-left media-middle">
+                                <img class="img-responsive img-rounded" src="@Html.Content(recruitmentNeed.IconUrl)" />
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">@recruitmentNeed.ClassName</h5>
+                                Specs: <span class="text-success"><i>@recruitmentNeed.SpecsDisplay</i></span>
+                            </div>
                         </div>
                     </div>
+                }
+            }
+            else
+            {
+                <div class="col-md-12">
+                    <p>
+                        Because we want to ensure that our team gets as much active time as possible,
+                        we keep a lean roster of approximately 23 raiders and it is currently full.
+                    </p>
+                    <p>
+                        If BLT seems like the type of organization you would like to be a party of you can 
+                        still join us for flexible raid content and other activities.  Please consider filling
+                        out an application and reaching out to our guild officer Hufur (TODO: Hufur Battletag)
+                    </p>
                 </div>
             }
         </div>
