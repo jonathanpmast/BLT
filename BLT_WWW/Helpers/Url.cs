@@ -15,7 +15,6 @@ namespace BLT.WWW.Helpers
             return new EncodedHtmlString(val);
         }
 
-
         public static string Combine(params string[] parts)
         {            
             if (parts == null || parts.Length == 0) return string.Empty;

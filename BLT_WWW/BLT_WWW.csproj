@@ -135,6 +135,7 @@
     <Content Include="Views\admin\ksk\index.cshtml" />
     <Content Include="Views\_layout.cshtml" />
     <Content Include="Views\Home\recruiting.cshtml" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,6 +158,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\admin\KSKSaveViewModel.cs" />
     <Compile Include="ViewModels\admin\KSKUploadResults.cs" />
+    <Compile Include="ViewModels\RecruitingNeedViewModel.cs" />
     <Compile Include="ViewModels\sk\LootWheelIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

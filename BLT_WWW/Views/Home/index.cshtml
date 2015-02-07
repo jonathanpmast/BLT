@@ -1,5 +1,6 @@
-﻿@{
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.HomeViewModel>
+@{
     Layout = "_layout.cshtml";
 }
 
-@Html.Partial("recruiting.cshtml")
+@Html.Partial("recruiting.cshtml", @Model)

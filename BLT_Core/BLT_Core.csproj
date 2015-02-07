@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Packages\LibLog.1.4\LibLog.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Import\Constants.cs" />
     <Compile Include="Import\ImportClass.cs" />
     <Compile Include="Import\ImportList.cs" />
