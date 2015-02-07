@@ -12,7 +12,26 @@
         .navbar-nav > li {
             float: none;
             display: inline-block;
+            -moz-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            -webkit-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s;
         }
+
+            .navbar-nav > li.active > a {
+                border-radius: 5px 5px 0 0;
+            }
+
+            .navbar-nav > li:hover {
+                background-color: #E7E7E7;
+                color: black;
+                border-radius: 5px 5px 0 0;
+                box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
+            }
+
+            .navbar-nav > li > a {
+                padding: 5px 17px 5px;
+            }
 }
 
 .head-logo {
@@ -22,18 +41,17 @@
 }
 
 .btn-apply {
-
     height: 20px;
     font-size: .7em;
-    padding-top:1px;
+    padding-top: 1px;
     margin-left: 5px;
 }
 
 .recruitment-well {
-    min-width: 150px
+    min-width: 150px;
 }
 
-.recruitment-well img {
-    min-height:28px;
-    min-width:28px;
-}
+    .recruitment-well img {
+        min-height: 28px;
+        min-width: 28px;
+    }
