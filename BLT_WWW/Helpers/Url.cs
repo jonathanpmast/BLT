@@ -15,6 +15,12 @@ namespace BLT.WWW.Helpers
             return new EncodedHtmlString(val);
         }
 
+        public static IHtmlString AppRoot<T>(this HtmlHelpers<T> helper, string content = "") {
+            return new EncodedHtmlString(Combine(!string.IsNullOrWhiteSpace(helper.RenderContext.Context.Request.Url.BasePath) ?
+                helper.RenderContext.Context.Request.Url.BasePath :
+                "/",content));
+        }
+
         public static string Combine(params string[] parts)
         {            
             if (parts == null || parts.Length == 0) return string.Empty;

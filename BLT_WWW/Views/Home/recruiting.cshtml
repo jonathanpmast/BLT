@@ -1,32 +1,29 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<BLT.WWW.ViewModels.HomeViewModel>
-<div class="row recruitment">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Recruitment Openings
-                    <button class="btn btn-primary btn-apply">Apply!</button>
-                </h3>
-            </div>
-            <div class="panel-body">
 
-                <div class="row">
-                    @foreach (var recruitmentNeed in @Model.RecruitingNeeds)
-                    {
-                        <div class="col-xs-12 col-md-3">
-                            <div class="media well well-sm recruitment-well">
-                                <div class="media-left media-middle">
-                                    <img class="img-responsive img-rounded" src="@Html.Content(recruitmentNeed.IconUrl)" />
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">@recruitmentNeed.ClassName</h5>
-                                    Specs: <span class="text-success"><i>@recruitmentNeed.SpecsDisplay</i></span>
-                                </div>
-                            </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Recruitment Openings
+            <button class="btn btn-primary btn-apply">Apply!</button>
+        </h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            @foreach (var recruitmentNeed in @Model.RecruitingNeeds)
+            {
+                <div class="col-md-12">
+                    <div class="media well well-sm recruitment-well">
+                        <div class="media-left media-middle">
+                            <img class="img-responsive img-rounded" src="@Html.Content(recruitmentNeed.IconUrl)" />
                         </div>
-                    }
+                        <div class="media-body">
+                            <h5 class="media-heading">@recruitmentNeed.ClassName</h5>
+                            Specs: <span class="text-success"><i>@recruitmentNeed.SpecsDisplay</i></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </div>
